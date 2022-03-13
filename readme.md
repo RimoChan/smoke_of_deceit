@@ -1,6 +1,8 @@
 # 把代码藏起来！
 
-事情是这样的——前几天，我发现我的Vtuber教程仓库里的Markdown渲染不出来了。当时我以为是GitHub的bug，但是我发现其他的仓库里Markdown渲染就是正常的，于是我就对比了一下，想起我不知道为什么时候往这个仓库里塞了一个奇怪的`.gitattributes`。
+事情是这样的，前几天，我发现我的Vtuber教程仓库里的Markdown渲染不出来了。
+
+当时我以为是GitHub的bug，但是我发现其他的仓库里Markdown渲染就是正常的。于是我对比了一下，才想起我不知道为什么时候往这个仓库里塞了一个奇怪的`.gitattributes`。
 
 它的内容是这样的——
 
@@ -8,9 +10,9 @@
 *.* linguist-language=python
 ```
 
-也就是说，GitHub在网页上渲染代码时，不仅会根据后缀，也会根据.gitattributes的指示。
+也就是说，GitHub在网页上渲染代码时，不仅会根据后缀，也会根据`.gitattributes`的`linguist-language`指示。
 
-这里面显然有一个特例是Markdown，它并不是语义着色，而是把代码编译成HTML。那这样一来，岂不是就可以把代码假装成Markdown，让别人在网页上找不到代码！
+这里面显然有一个特例是Markdown，它并不是语义着色，而是把代码编译成HTML……那这样一来，岂不是就可以把代码假装成Markdown，让别人在网页上找不到代码！
 
 
 ## 如何操作
